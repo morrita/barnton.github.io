@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
-}
+} 
 
 body {
     height: 100vh;
@@ -25,42 +25,75 @@ a {
     text-decoration: none;
 }
 
+/* Design */
 .logo {
     font-weight: bold;
     font-size: 25px;
-    color: #81522e;
+    color: #a46534;
 }
 
-.menu a {
-    color: #333;
-}
-
-.menu ul {
-    display: flex;
-    gap: 40px;
+/* Index the main section */
+.menu {
     list-style: none;
-    align-items: center; 
+    justify-content: center;
+    display: flex;
 }
 
-.menu a:hover {
-    color: #81522e;
+.menu li {
+    position: relative;
 } 
 
+.menu li a {
+    display: block;
+    color: black; 
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 18px 25px;
+}
+
+.menu li a:hover {
+    background: #ffc573;
+}
+
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+   /* background: #fef0d3; */
+    background: #f0d49d;
+    list-style: none;
+    min-width: 180px;
+    display: none;
+   
+}
+
+.submenu a{
+    padding: 12px 15px;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* btn of the office */
 .btn {
     padding: 8px 30px;
     font-size: 16px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: #81522e;
+    background-color: #af6d3f;
     color: #fff;
     transform: 0.5;
 }
 
 .btn:hover {
-    background-color: #af6d3f;
+    background-color:#bf8a63;;
 }
 
+/* image */
 .home {
     display: flex;
     align-items: center;
@@ -77,11 +110,33 @@ a {
 
 .home h1 {
     font-size: 72px ;
+
     color: #af6d3f;
     line-height: 72px;
 
 }
 
+.home h2 {
+   /* padding: 32px; */
+    padding: 20px;
+
+    color: #af6d3f;
+}
+
+.maps {
+    display: flex;
+    align-items: center;
+    text-align: center;
+   /* flex-direction: column; */
+    flex-direction: top;
+    
+ /*  margin: 20px 0; */
+
+
+
+}
+
+/* Text message */
 .images {
     margin-top: 50px;
     display: flex;
@@ -90,11 +145,9 @@ a {
     gap: 20px;
 }
 
-
 .images img {
     width: 20%;
-   /*height: 350px;*/
-    height: 250px;
+    height: 350px;
     object-fit: cover;
     border-radius: 20px;
     transition: 0.5s;
@@ -104,5 +157,26 @@ a {
     width: 30%;
     cursor: pointer;
     filter: contrast(1.1);
+} 
+/* */
+
+.wood {
+    display: flex;
+    align-items: left;
+    text-align: left;
+    flex-direction: column;
+  /*  margin: 20px 0; */
+    margin: 40px 0;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
 
