@@ -99,7 +99,8 @@ a {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    margin: 20px 0;
+    margin: 20px 0; 
+
 }
 
 .home h4 {
@@ -110,17 +111,15 @@ a {
 
 .home h1 {
     font-size: 72px ;
-
     color: #af6d3f;
     line-height: 72px;
-
 }
 
 .home h2 {
-   /* padding: 32px; */
-    padding: 20px;
-
+ /*   padding: 32px; */
+    font-size: 32px;
     color: #af6d3f;
+    padding: 20px; 
 }
 
 .maps {
@@ -168,6 +167,17 @@ a {
   /*  margin: 20px 0; */
     margin: 40px 0;
 }
+
+.places {
+    display: flex;
+    align-items: left;
+    text-align: left;
+    flex-direction: column;
+  /*  margin: 20px 0; */
+    margin: 40px 0;
+    
+}
+
 
 @keyframes fadeIn {
     from {
