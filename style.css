@@ -180,6 +180,12 @@ a {
     
 }
 
+.map {
+    align-items: center;
+    text-align: center;
+
+}
+
 
 
 @keyframes fadeIn {
