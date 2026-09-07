@@ -8,9 +8,13 @@
     font-family: "Poppins", sans-serif;
 } 
 
+.navbar {
+    background-color: hsl(40, 96%, 91%);
+}
+
 body {
     height: 100vh;
-    background-color: #fef0d3;  
+    background-color: hsl(40, 96%, 91%);  
     padding: 0 12%;
 }
 
