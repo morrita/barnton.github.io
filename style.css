@@ -2,21 +2,79 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+ /*  
+ 
+ @import (max-width: 768px) {
+    .nav-links {
+        top: 70px;
+        right: 0;
+        background: #fef0d3;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+} 
+    */
+
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+} 
+
+/* update the menu styles */
+.menu {
+    list-style: none;
+    justify-content: center;
+    display: flex; 
+}
+
+.menu li {
+    position: relative;
+} 
+
+.menu li a {
+    display: block;
+  /*  color: black; */
+    color: #a46534;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 18px 25px;
+}
+
+.menu li a:hover {
+    background: #ffc573;
+    border-radius: 6px;
+}
+
+/* submenu styles */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f0d49d;
+    list-style: none;
+    min-width: 180px;
+    display: none; 
+    border-radius: 6px;
+}
+ 
+.submenu a{
+  padding: 12px 15px;
+
+} 
+
+.dropdown:hover .submenu {
+    display: block;
+    animation: fadeIn 0.3s ease;
 } 
 
 .navbar {
     background-color: hsl(40, 96%, 91%);
-}
-
-body {
-    height: 100vh;
-    background-color: hsl(40, 96%, 91%);  
-    padding: 0 12%;
-}
+} 
 
 header {
     display: flex;
@@ -36,52 +94,6 @@ a {
     color: #a46534;
 }
 
-/* Index the main section */
-.menu {
-    list-style: none;
-    justify-content: center;
-    display: flex;
-}
-
-.menu li {
-    position: relative;
-} 
-
-.menu li a {
-    display: block;
-    color: black; 
-    text-decoration: none;
-    transition: 0.3s;
-    padding: 18px 25px;
-}
-
-.menu li a:hover {
-    background: #ffc573;
-    border-radius: 6px;
-}
-
-
-.submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-   /* background: #fef0d3; */
-    background: #f0d49d;
-    list-style: none;
-    min-width: 180px;
-    display: none;
-    border-radius: 6px;
-   
-}
-
-.submenu a{
-    padding: 12px 15px;
-}
-
-.dropdown:hover .submenu {
-    display: block;
-    animation: fadeIn 0.3s ease;
-}
 
 /* btn of the office */
 .btn {
@@ -99,7 +111,7 @@ a {
     background-color:#bf8a63;;
 }
 
-/* image */
+/* image class */
 .home {
     display: flex;
     align-items: center;
@@ -122,12 +134,12 @@ a {
 }
 
 .home h2 {
- /*   padding: 32px; */
     font-size: 32px;
     color: #af6d3f;
     padding: 20px; 
 }
 
+/* map class */
 .maps {
     display: flex;
     align-items: center;
@@ -137,7 +149,7 @@ a {
  /*  margin: 20px 0; */
 }
 
-/* Text message */
+/* images class */
 .images {
     margin-top: 50px;
     display: flex;
@@ -146,7 +158,6 @@ a {
    /* gap: 20px; */
     gap: 5px; 
     /* border-radius: 6px; */
-
 }
 
 .images img {
@@ -162,18 +173,19 @@ a {
     width: 30%; 
     cursor: pointer;
     filter: contrast(1.1);
-} 
-/* */
+}
 
+/*
 .wood {
     display: flex;
     align-items: left;
     text-align: left;
     flex-direction: column;
-  /*  margin: 20px 0; */
     margin: 40px 0;
 }
+*/
 
+/* places class */
 .places {
     display: flex;
     align-items: left;
@@ -184,13 +196,12 @@ a {
     
 }
 
+/* map class */
 .map {
     align-items: center;
     text-align: center;
 
 }
-
-
 
 @keyframes fadeIn {
     from {
@@ -203,3 +214,21 @@ a {
     }
 } 
 
+
+body {
+    height: 100vh;
+    background-color: hsl(40, 96%, 91%);  
+    padding: 0 12%;
+}
+
+/* For devices with a minimum width of 1400px (Medium) */
+@media screen and (max-width: 1400px) {
+  body {
+    background-color: rgb(0, 255, 89);  }
+}
+
+/* For devices with a minimum width of 768px (Medium) */
+@media screen and (max-width: 768px) {
+  body {
+    background-color: blue;  }
+}
