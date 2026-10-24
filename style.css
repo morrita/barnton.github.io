@@ -2,22 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
- /*  
- 
- @import (max-width: 768px) {
-    .nav-links {
-        top: 70px;
-        right: 0;
-        background: #fef0d3;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-    }
-} 
-    */
-
-
 * {
     margin: 0;
     padding: 0;
@@ -72,8 +56,13 @@
     animation: fadeIn 0.3s ease;
 } 
 
+/* home page styles */
 .navbar {
     background-color: hsl(40, 96%, 91%);
+    color: #a46534;
+    justify-content: flex-end;
+    align-items: center;
+  /*  justify-content: space-between; */
 } 
 
 header {
@@ -95,21 +84,18 @@ a {
 }
 
 
-/* btn of the office */
-.btn {
-    padding: 8px 30px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: #af6d3f;
-    color: #fff;
-    transform: 0.5;
+.logo-map {
+    display: none;
 }
 
-.btn:hover {
-    background-color:#bf8a63;;
-}
+.logo-map {
+    font-weight: bold;
+    font-size: 25px;
+    color: #a46534;
+    display: none;
+} 
+
+
 
 /* image class */
 .home {
@@ -127,16 +113,18 @@ a {
     color: #af6d3f;
 }
 
+/* .home h1 */
 .home h1 {
     font-size: 72px ;
     color: #af6d3f;
     line-height: 72px;
 }
 
+/* .home h2 */
 .home h2 {
     font-size: 32px;
     color: #af6d3f;
-    padding: 20px; 
+    padding: 20px;
 }
 
 /* map class */
@@ -175,16 +163,6 @@ a {
     filter: contrast(1.1);
 }
 
-/*
-.wood {
-    display: flex;
-    align-items: left;
-    text-align: left;
-    flex-direction: column;
-    margin: 40px 0;
-}
-*/
-
 /* places class */
 .places {
     display: flex;
@@ -196,12 +174,14 @@ a {
     
 }
 
-/* map class */
-.map {
-    align-items: center;
-    text-align: center;
-
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
+
 
 @keyframes fadeIn {
     from {
@@ -221,14 +201,44 @@ body {
     padding: 0 12%;
 }
 
-/* For devices with a minimum width of 1400px (Medium) */
-@media screen and (max-width: 1400px) {
-  body {
-    background-color: rgb(0, 255, 89);  }
+
+/* Medium devices (landscape tablets, 768px and up) */
+/*
+
+@media only screen and (max-width: 992px) {
+  body {  
+  background-color: hsl(40, 96%, 91%);}
+} */
+
+/*
+@media only screen and (max-width: 768px) {
+  body {  
+  background: rgb(0, 255, 8);}
+
+.logo-map {
+  padding: 20px;
+    display: block;}
+} */
+
+@media only screen and (max-width: 768px) {
+ 
+.logo-map {
+  padding: 20px;
+    display: block;}
 }
 
-/* For devices with a minimum width of 768px (Medium) */
-@media screen and (max-width: 768px) {
-  body {
-    background-color: blue;  }
-}
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*
+@media only screen and (max-width: 600px) {
+ body {   
+ background-color: green;}
+
+.logo-map {
+  padding: 20px;
+  display: block;}
+} */
+
