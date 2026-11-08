@@ -9,6 +9,13 @@
     font-family: "Poppins", sans-serif;
 } 
 
+:root {
+    --primary-color: #ffc573;
+    --secondary-color: #f0d49d;
+    --text-color: #a46534;
+    --background-color: hsl(40, 96%, 91%);
+}
+
 /* update the menu styles */
 .menu {
     list-style: none;
@@ -23,7 +30,7 @@
 .menu li a {
     display: block;
   /*  color: black; */
-    color: #a46534;
+    color: var( --text-color);
     text-decoration: none;
     transition: 0.3s;
     padding: 18px 25px;
@@ -59,7 +66,8 @@
 /* home page styles */
 .navbar {
     background-color: hsl(40, 96%, 91%);
-    color: #a46534;
+   /* color: #a46534; */
+    color: var( --text-color);
     justify-content: flex-end;
     align-items: center;
   /*  justify-content: space-between; */
@@ -77,21 +85,26 @@ a {
 }
 
 /* Design */
+
 .logo {
     font-weight: bold;
     font-size: 25px;
-    color: #a46534;
+   /* color: #a46534; */
+    color: var( --text-color);
 }
 
+/* Media Queries */
 
 .logo-map {
     display: none;
-}
+} 
+
 
 .logo-map {
     font-weight: bold;
     font-size: 25px;
-    color: #a46534;
+   /* color: #a46534; */
+    color: var( --text-color);
     display: none;
 } 
 
@@ -110,20 +123,23 @@ a {
 .home h4 {
     font-family: "Monsieur La Doulaise", sans-serif;
     font-size: 72px ;
-    color: #af6d3f;
+    color: var(--text-color);
 }
 
 /* .home h1 */
+/*
 .home h1 {
     font-size: 72px ;
-    color: #af6d3f;
+    color: var(--text-color);
     line-height: 72px;
 }
+*/
 
 /* .home h2 */
 .home h2 {
     font-size: 32px;
-    color: #af6d3f;
+    /*color: #af6d3f;*/
+    color: var(--text-color);
     padding: 20px;
 }
 
@@ -201,44 +217,40 @@ body {
     padding: 0 12%;
 }
 
-
-/* Medium devices (landscape tablets, 768px and up) */
-/*
-
-@media only screen and (max-width: 992px) {
-  body {  
-  background-color: hsl(40, 96%, 91%);}
-} */
-
-/*
-@media only screen and (max-width: 768px) {
-  body {  
-  background: rgb(0, 255, 8);}
-
+@media only screen and (max-width: 1250px) {
 .logo-map {
-  padding: 20px;
-    display: block;}
-} */
+    padding: 20px;
+    display: block;
 
-@media only screen and (max-width: 768px) {
- 
-.logo-map {
-  padding: 20px;
-    display: block;}
+    background-color: rgb(25, 0, 255);
+}
+.menu {
+    display: none;    
 }
 
+}
 
-
-
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/*
-@media only screen and (max-width: 600px) {
- body {   
- background-color: green;}
-
+@media only screen and (max-width: 450px) {
 .logo-map {
-  padding: 20px;
-  display: block;}
-} */
+    padding: 20px;
+    display: block;
+    background-color: var(--background-color);
+}
 
+.menu {
+    display: none;    
+}
+
+.home h4 {
+    font-family: "Monsieur La Doulaise", sans-serif;
+    font-size: 50px ;
+    color: var(--text-color);
+}
+
+.home h2 {
+    font-size: 24px;
+    color: var(--text-color);
+    padding: 20px;
+}
+
+}
